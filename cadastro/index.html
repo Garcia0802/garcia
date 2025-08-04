@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de usuario</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+
+        <div class="colorida">
+            <h1>BEM VINDO!</h1>
+            <p>Para se manter conectado conosco <br>por favor fala log-in com suas informações pessoais.</p>
+            <p>Se você não tem cadastro, clique no botão abaixo para se cadastrar.</p>
+                <select id="possuiCadastro" name="possuiCadastro" required>
+                <option value="true">Sim</option>
+                <option value="false">Não</option>
+            </select>
+        </div>
+        <div class="cadastro">
+            <h2>Entrar na conta</h2>
+            <form>
+                <label for="nome"></label>
+                <input type="text" placeholder="Nome" id="nome" name="nome" required>
+                
+                <label for="idade"></label>
+                <input type="text" id="idade" name="idade" required placeholder="Idade">
+                
+                
+                <label for="senha"></label>
+                <input type="text" id="senha" name="senha" required placeholder="Senha">
+                
+                <button>Logar</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+<!-- ----------------------------------------------------------------------------------------------- -->
+
+<script>
+    let nome = document.getElementById('nome');
+    let idade = document.getElementById('idade');
+    let senha = document.getElementById('senha');
+    let botao = document.querySelector('button');
+    let possuiCadastro = document.getElementById('possuiCadastro');
+    let titulo = document.querySelector('.cadastro h2'); // Seleciona o <h2> dentro da div .cadastro
+
+    // Atualiza o título com base na seleção do campo "possuiCadastro"
+    possuiCadastro.addEventListener('change', function () {
+        if (possuiCadastro.value === "false") {
+            titulo.textContent = "Cadastrar-se"; // Altera o texto do <h2> para "Cadastrar-se"
+            botao.textContent = "Cadastrar"; // Altera o texto do botão para "Cadastrar"
+        } else {
+            titulo.textContent = "Entrar na conta"; // Altera o texto do <h2> para "Entrar na conta"
+            botao.textContent = "Logar"; // Altera o texto do botão para "Logar"
+        }
+    });
+
+    botao.addEventListener('click', function (event) {
+        event.preventDefault(); // Impede o envio do formulário
+
+        let idadeValor = parseInt(idade.value); // Converte a idade para número
+        let possuiCadastroValor = possuiCadastro.value; // Obtém o valor selecionado no select
+
+        if (isNaN(idadeValor)) {
+            alert('Por favor, insira uma idade válida.');
+            return;
+        }
+
+        if (possuiCadastroValor === "true") {
+            if (idadeValor < 12) {
+                alert('Acesso negado: não é possivel se cadastrar com a idade inserida.');
+            } else if (idadeValor >= 12 && idadeValor <= 17) {
+                alert('Acesso permitido com restrições para menores.');
+            } else if (idadeValor >= 18) {
+                alert('Acesso completo permitido.');
+            }
+        } else if (possuiCadastroValor === "false") {
+            if (idadeValor < 12) {
+                alert('Acesso negado: idade insuficiente para cadastro.');
+            } 
+            } else if (idadeValor >= 12 && idadeValor <= 17) {
+                alert('Cadastrado com restrições para menores.');
+            } else if (idadeValor >= 18) {
+                alert('Cadastrado com acesso completo permitido.');
+            }
+             else {
+            alert('Por favor, preencha os campos corretamente.');
+        }
+    });
+</script>
+
+<!-- ----------------------------------------------------------------------------------------------- -->
+<!-- Se a idade é menor que 12, exibir: "Acesso negado: idade insuficiente para cadastro."
+Se a idade está entre 12 e 17 e possuiCadastro for true, exibir: "Acesso permitido com restrições para menores."
+Se a idade for maior ou igual a 18 ou possuiCadastro for true, exibir: "Acesso completo permitido."
+Caso contrário, exibir: "Usuário precisa se cadastrar primeiro." -->
+
+<script src="Main.java"></script>
+
+</html>

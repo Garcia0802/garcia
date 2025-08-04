@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    height: 90vh;
+    width: 90vw; 
+    margin: auto;
+    margin-top: 5vh;
+}
+
+.colorida {
+    background: linear-gradient(to right, #ca1010, #690000);
+    color: white;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 50vw;
+    display: flex;
+    flex-direction: column; /* Centraliza o conteúdo verticalmente */
+    font-family: Arial, Helvetica, sans-serif;
+
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.cadastro {
+    background-color: #ffb6b6;
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centraliza o conteúdo verticalmente */
+    width: 50vw;
+    height: 100%;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px
+}
+
+/* Remova margens verticais desnecessárias */
+p, h1 {
+    margin: 0;
+    width: 30vw;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centraliza o conteúdo verticalmente */
+    width: 100%;
+}
+
+input{
+    width: 40%;
+    height: 40px;
+    margin: 10px 0;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    background-color: white;
+}
+
+.colorido label{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 8vh;
+    font-size: 1.5rem;
+}
+
+select {
+    width: 40%;
+    height: 40px;
+    margin: 10px 0;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(223, 223, 223);
+    font-size: 1rem;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    margin-top: 5vh;
+}
+
+h2{
+    color: #ca1010;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 2vh;
+    font-size: 2rem;
+}
+
+button{
+    width: 40%;
+    height: 40px;
+    margin: 10px 0;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    background-color: #ca1010;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}

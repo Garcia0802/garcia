@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The English Times</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=PT+Serif:wght@400;700&display=swap');
+        body {
+            font-family: 'PT Serif', 'Times New Roman', Times, serif;
+            background: #fff;
+            color: #222;
+            margin: 0;
+            padding: 0;
+        }
+        .masthead {
+            width: 100%;
+            border-bottom: 3px solid #222;
+            text-align: center;
+            padding: 24px 0 8px 0;
+            background: #fff;
+        }
+        .masthead h1 {
+            font-family: 'PT Serif', 'Times New Roman', Times, serif;
+            font-size: 3em;
+            letter-spacing: 2px;
+            margin: 0;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .masthead .meta {
+            font-size: 1em;
+            color: #555;
+            margin-top: 4px;
+            font-style: italic;
+        }
+        .newspaper-container {
+            max-width: 1100px;
+            margin: 30px auto;
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            padding: 32px 24px 24px 24px;
+            border-radius: 0;
+            display: flex;
+            gap: 32px;
+            border-left: 1px solid #bbb;
+            border-right: 1px solid #bbb;
+        }
+        .column {
+            flex: 1 1 0;
+            padding: 0 16px;
+            border-right: 1px solid #ddd;
+        }
+        .column:last-child {
+            border-right: none;
+        }
+        .headline {
+            font-family: 'PT Serif', 'Times New Roman', Times, serif;
+            font-size: 1.7em;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #111;
+            border-bottom: 2px solid #222;
+            padding-bottom: 4px;
+        }
+        .article {
+            margin-bottom: 32px;
+        }
+        .article p {
+            font-size: 1.08em;
+            line-height: 1.7;
+            color: #222;
+            margin-top: 0;
+        }
+        .weather-now {
+            max-width: 1100px;
+            margin: 18px auto 0 auto;
+            padding: 12px 24px;
+            background: #f8f8f8;
+            border: 1px solid #bbb;
+            border-radius: 0;
+            font-family: 'PT Serif', 'Times New Roman', Times, serif;
+            font-size: 1.08em;
+        }
+        .footer {
+            text-align: center;
+            color: #555;
+            padding: 18px 0 12px 0;
+            font-size: 0.95em;
+            font-family: 'PT Serif', 'Times New Roman', Times, serif;
+            border-top: 1px solid #bbb;
+            margin-top: 32px;
+            background: #fff;
+        }
+        @media (max-width: 900px) {
+            .newspaper-container {
+                flex-direction: column;
+                gap: 0;
+                padding: 16px 4px;
+            }
+            .column {
+                border-right: none;
+                border-bottom: 1px solid #ddd;
+                padding: 0 4px 16px 4px;
+            }
+            .column:last-child {
+                border-bottom: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="masthead">
+        <h1>The English Times</h1>
+        <div class="meta">Santa Cruz do Sul, Brazil &middot; Thursday, July 4, 2024 &middot; Vol. 1, No. 1</div>
+    </div>
+    <div class="weather-now">
+        <strong>Currently 13°C · Partly Sunny<br>Santa Cruz do Sul, Brazil</strong>
+        <div style="display:flex;flex-wrap:wrap;gap:16px;margin-top:12px;">
+            <div style="flex:1 1 120px;">
+                <strong>Today</strong><br>19° / 6°<br><span style="color:#555;">Increasing clouds</span>
+            </div>
+            <div style="flex:1 1 120px;">
+                <strong>Saturday</strong><br>19° / 9°<br><span style="color:#555;">Cloudy, then clearing</span>
+            </div>
+            <div style="flex:1 1 120px;">
+                <strong>Sunday</strong><br>18° / 8°<br><span style="color:#555;">Clouds with sunny breaks</span>
+            </div>
+            <div style="flex:1 1 120px;">
+                <strong>Monday</strong><br>22° / 11°<br><span style="color:#555;">Sunny</span>
+            </div>
+            <div style="flex:1 1 120px;">
+                <strong>Tuesday</strong><br>21° / 9°<br><span style="color:#555;">Partly sunny</span>
+            </div>
+            <div style="flex:1 1 120px;">
+                <strong>Wednesday</strong><br>18° / 10°<br><span style="color:#555;">Clouds with sunny breaks</span>
+            </div>
+            <div style="flex:1 1 120px;">
+                <strong>Thursday</strong><br>19° / 10°<br><span style="color:#555;">Cloudy, then clearing</span>
+            </div>
+        </div>
+    </div>
+    <div class="newspaper-container">
+        <div class="column">
+            <div class="article">
+                <div class="headline">🌤️ Weekly Weather in Santa Cruz do Sul, RS</div>
+                <p>From July 4th to 10th, the region will experience a mix of cloudy and sunny days, with highs ranging from 18–22 °C and lows between 6–11 °C. The weekend (July 5–6) brings overcast skies, followed by a sunny start to the week on Monday (July 7), then alternating sun and clouds. Despite the milder winter days, there is little chance of rain — great days for outdoor activities! Remember to bring a light jacket for the cooler mornings and evenings, and enjoy the pleasant weather for walks, sports, or picnics in the park.</p>
+            </div>
+            <div class="article">
+                <div class="headline">📚 Adventure of the 2nd Year High School Class at Senac</div>
+                <p>Students from the 2nd year of Senac high school went on a field trip to Parque Witeck to photograph and capture special moments in nature and with friends. In the morning, they hiked trails, photographed landscapes and local wildlife, encouraging artistic vision and environmental awareness. In the afternoon, they finished with a group picnic on the central lawn, sharing snacks, stories, and laughter — promoting integration, learning, and socializing outside the classroom. The excursion also fostered teamwork and a deeper appreciation for the environment, making it a memorable day for everyone involved.</p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="article">
+                <div class="headline">🌍 World News: War in Iran</div>
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=700&q=80" alt="Conflict news illustration" style="width:100%;max-width:420px;display:block;margin:0 auto 16px auto;border:1px solid #bbb;">
+                <p>Since June 13th, Israel and the USA have carried out attacks on Iranian nuclear facilities — including Fordow, Natanz, and Esfahan — in an offensive called “Operation Midnight Hammer.” The conflict lasted 12 days, with missiles and drones launched by both Israel and Iran. Hostilities ended on June 24th with a ceasefire brokered by the USA. Although IAEA access to some facilities is suspended, diplomatic initiatives are intensifying behind the scenes — such as negotiations between US representative Steve Witkoff and Iranian authorities in Europe, which may restore nuclear oversight. The situation remains unstable, with risks of regional escalation and a prolonged political stalemate. International observers are closely monitoring developments, hoping for a peaceful resolution and renewed dialogue between the countries involved.</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        &copy; 2024 The English Times &middot; Luís, Iuri e Pedro Arthur.
+    </div>
+</body>
+</html>

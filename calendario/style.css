@@ -1,0 +1,24 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+th {
+    background-color: #7f3aff;
+    color: white;
+}
+.feriado {
+    background-color: rgb(0, 213, 255);
+}
+.calendario {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border-collapse: collapse;
+    margin: 20px;
+}
